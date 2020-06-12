@@ -4,3 +4,4 @@ The algo recursively compares the pivot with left half and right half and based 
 The number is found out by halving the inputlist arriving at a runtime of logn. 
 
 time O(n) = log n
+space O(n) = Constant

@@ -1,17 +1,11 @@
+# Sqrt in logn time
 import math
+
 # O(n) = log n
 def sqrt(number):
-    """
-    Calculate the floored square root of a number
-
-    Args:
-       number(int): Number to find the floored squared root
-    Returns:
-       int: Floored Square Root
-    """
-    if number == 0:
+    if number == 0 :
         return 0
-    if number <0:
+    if number == None or number <0:
         raise Exception("Invalid number")
     x = number  
     tolerance = 1
@@ -31,4 +25,5 @@ print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
 print ("Pass" if  (10 == sqrt(100)) else "Fail")
-sqrt(-1)
+print(sqrt(-1))
+print(sqrt(None))

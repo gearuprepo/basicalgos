@@ -1,13 +1,6 @@
+# Search in a Rotated Sorted Array
 #O(n) = log n
 def rotated_array_search(input_list, number):
-    """
-    Find the index by searching in a rotated sorted array
-
-    Args:
-       input_list(array), number(int): Input array to search and the target
-    Returns:
-       int: Index or -1
-    """
     retval = recursearch(input_list,number,0)
     return retval
 
