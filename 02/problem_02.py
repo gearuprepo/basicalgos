@@ -1,3 +1,4 @@
+#O(n) = log n
 def rotated_array_search(input_list, number):
     """
     Find the index by searching in a rotated sorted array
@@ -9,6 +10,7 @@ def rotated_array_search(input_list, number):
     """
     retval = recursearch(input_list,number,0)
     return retval
+
 
 def recursearch(input_list,number,index):
     size = len(input_list)
