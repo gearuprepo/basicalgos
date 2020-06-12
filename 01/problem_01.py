@@ -1,4 +1,5 @@
 import math
+# O(n) = log n
 def sqrt(number):
     """
     Calculate the floored square root of a number

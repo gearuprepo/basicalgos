@@ -1,3 +1,4 @@
+#O(n) = n
 def sort_012(input_list):
     """
     Given an input array consisting on only 0, 1, and 2, sort the array in a single traversal.
