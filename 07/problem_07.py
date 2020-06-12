@@ -33,14 +33,23 @@ class RouteTrie:
                     current_node.insert(path)
                     current_node = current_node.children[path]
             current_node.handler = handler
-        print("")
 
-    def find(self, ...):
+    def find(self, path):
         # Starting at the root, navigate the Trie to find a match for this path
         # Return the handler for a match, or None for no match
+        splitpaths = path.split("/")
+        current_node =self.root
+        for p in splitpaths:
+            if p!='':
+                if p not in current_node.children:
+                    return False
+                current_node = current_node.children[p]
+        return current_node.handler
 
 rt = RouteTrie()
 rt.insert("/home/about","Handler about")
 rt.insert("/home/","Handler home")
 rt.insert("/","root Handler")
 rt.insert("/me","me handler")
+print(rt.find("/about/"))
+print(rt.find("/"))
