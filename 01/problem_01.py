@@ -10,7 +10,8 @@ def sqrt(number):
     """
     if number == 0:
         return 0
-    
+    if number <0:
+        raise Exception("Invalid number")
     x = number  
     tolerance = 1
     guess = recursqrt(x,number,tolerance)
@@ -29,3 +30,4 @@ print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
 print ("Pass" if  (10 == sqrt(100)) else "Fail")
+sqrt(-1)
