@@ -18,10 +18,14 @@ def recursearch(input_list,number,index):
     mid = input_list[midindex]
     if mid == number:
         return index+midindex
-    if number>=input_list[leftedgeindex]:
-        return recursearch(input_list[leftedgeindex:midindex],number,index)
+    if size > 1:
+        if number >= input_list[leftedgeindex] and number <= input_list[midindex-1]: 
+            return recursearch(input_list[leftedgeindex:midindex],number,index)
+        else:
+            return recursearch(input_list[midindex+1:rightedgeindex+1],number,index + midindex + 1)
     else:
-        return recursearch(input_list[midindex:rightedgeindex],number,index + midindex)
+        return -1
+
 def linear_search(input_list, number):
     for index, element in enumerate(input_list):
         if element == number:
@@ -36,8 +40,8 @@ def test_function(test_case):
     else:
         print("Fail")
 
-#test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
-#test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
+test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
+test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
-#test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-#test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+test_function([[6, 7, 8, 1, 2, 3, 4], 1])
+test_function([[6, 7, 8, 1, 2, 3, 4], 10])
