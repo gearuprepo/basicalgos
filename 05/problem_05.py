@@ -3,11 +3,13 @@ class TrieNode(object):
         self.is_word = False
         self.children = {}
     
+    # O(n) = 1
     def insert(self, char):
         ## Add a child node in this Trie
         if char not in self.children:
             self.children[char] = TrieNode()
-   
+    
+    # O(n) = nlogn
     def suffixes(self, suffix = ''):
         ## Recursive function that collects the suffix for 
         ## all complete words below this point
@@ -30,7 +32,8 @@ class TrieNode(object):
 class Trie(object):
     def __init__(self):
         self.root = TrieNode()
-
+    
+    # O(n) = n, n is the chars in a word
     def insert(self, word):
         current_node = self.root
         for char in word:
@@ -38,6 +41,7 @@ class Trie(object):
             current_node = current_node.children[char]
         current_node.is_word = True
 
+    # O(n) = n
     def find(self, word):
         current_node = self.root
         for char in word:
@@ -66,4 +70,8 @@ def f(prefix):
             print(prefix + " not found")
     else:
         print('')
+
 f('ant')
+f('f')
+f('z')
+f('tri')
