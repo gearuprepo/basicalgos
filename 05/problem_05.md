@@ -5,7 +5,7 @@
         - Time: O(n) = n
         - Space: O(n) = n [n -> chars in word]
     - suffixes
-        - Time:O(n) = logn - nlogn [ Due to recursion for specific tree and subchilgd]
+        - Time:O(n) = logn to nlogn [ Due to recursion for specific tree and subchilgd]
         - Space: O(n) = n [n-> return autocomplete list of values]
 - Trie
     - insert
