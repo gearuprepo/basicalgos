@@ -14,3 +14,8 @@
     - find:
         - Time: O(n) = n
         - Space: O(n) = 1
+
+Note:
+-Considering Averge case for "element in dict" = O(n) = 1
+References
+https://wiki.python.org/moin/TimeComplexity

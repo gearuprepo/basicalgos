@@ -5,3 +5,6 @@ The number is found out by halving the inputlist arriving at a runtime of logn.
 
 time O(n) = log n
 space O(n) = Constant
+
+Review comment fixes:
+1. Fixed code for edge cases.

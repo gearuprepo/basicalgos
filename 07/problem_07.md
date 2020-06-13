@@ -18,3 +18,8 @@
     - lookup
         - Time O(n) = logn
         - Space O(n)= n
+
+Note:
+-Considering Averge case for "element in dict" = O(n) = 1
+References
+https://wiki.python.org/moin/TimeComplexity

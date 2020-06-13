@@ -23,6 +23,7 @@ def recursearch(input_list,number,index):
                 return recursearch(input_list[leftedgeindex:midindex],number,index)
             else:
                 return recursearch(input_list[midindex+1:rightedgeindex+1],number,index + midindex + 1)
+        #Fix for Edge cases
         if number > mid and number < right:
              return recursearch(input_list[midindex+1:rightedgeindex+1],number,index + midindex + 1)
         else:
