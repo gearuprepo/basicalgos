@@ -3,7 +3,7 @@ class RouteTrieNode:
     def __init__(self,handler=None):
         self.children = {}
         self.handler = handler
-    #O(n) = 1
+    #O(n) = n, n-> no of child nodes
     def insert(self, path):
         if path not in self.children:
             self.children[path] = RouteTrieNode()
@@ -12,7 +12,7 @@ class RouteTrie:
     def __init__(self):
         self.root = RouteTrieNode()
     
-    #O(n) = n, n is the subpaths in the given route
+    #O(n) = n*m, n is the subpaths in the given route, m us the sub elements in tree
     def insert(self, route, handler):
         current_node = self.root
         if route == '/':
@@ -25,7 +25,7 @@ class RouteTrie:
                     current_node = current_node.children[path]
             current_node.handler = handler
 
-    #O(n) = logn
+    #O(n) = n*m, n- paths, m - children nodes
     def find(self, path):
         splitpaths = path.split("/")
         current_node =self.root
@@ -46,11 +46,11 @@ class Router:
         self.routetrie.insert("/",rooth)
         self.routetrie.insert("404",nfh)
 
-    #O(n) = n, n is the subpaths in the given route
+    #O(n) = n*m, n is the subpaths in the given route, m us the sub 
     def add_handler(self, path, handler):
         self.routetrie.insert(path,handler)
     
-    #O(n) = logn
+    #O(n) = n*m, n- paths, m - children nodes
     def lookup(self, path):
         return self.routetrie.find(path)
                 

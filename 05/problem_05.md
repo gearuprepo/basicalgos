@@ -2,17 +2,17 @@
 
 - TrieNode
     - Insert 
-        - Time: O(n) = 1
+        - Time: O(n) = n
         - Space: O(n) = n [n -> chars in word]
     - suffixes
-        - Time:O(n) = logn - nlogn [ Due to recursion for specific tree and subchilg]
+        - Time:O(n) = logn - nlogn [ Due to recursion for specific tree and subchilgd]
         - Space: O(n) = n [n-> return autocomplete list of values]
 - Trie
     - insert
-        - Time: O(n) = n
+        - Time: O(n) = n*m,  n- no of chars, m-no of children
         - Space: O(n) = n [n-> chars in word]
     - find:
-        - Time: O(n) = n
+        - Time: O(n) = n*m,  n- no of chars, m-no of children
         - Space: O(n) = 1
 
 Note:

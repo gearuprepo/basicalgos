@@ -5,7 +5,7 @@ class TrieNode(object):
         self.is_word = False
         self.children = {}
     
-    # O(n) = 1
+    # O(n) = n
     def insert(self, char):
         ## Add a child node in this Trie
         if char not in self.children:
@@ -35,7 +35,7 @@ class Trie(object):
     def __init__(self):
         self.root = TrieNode()
     
-    # O(n) = n, n is the chars in a word
+    # O(n) = n*m,  n- no of chars, m-no of children
     def insert(self, word):
         current_node = self.root
         for char in word:
@@ -43,7 +43,7 @@ class Trie(object):
             current_node = current_node.children[char]
         current_node.is_word = True
 
-    # O(n) = n
+    # O(n) = n * m, n- no of chars, m-no of children
     def find(self, word):
         current_node = self.root
         for char in word:
