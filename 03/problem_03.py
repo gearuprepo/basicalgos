@@ -59,6 +59,9 @@ test_function(test_case)
 test_case = [[0,1,2,3,4,5,6,7,8,9], [97531,86420]]
 test_function(test_case)
 
+#TC - Edge case
 test_case = [[1], [1,0]]
 test_function(test_case)
+#TC - Edge case
+print(rearrange_digits([]))
 

@@ -8,15 +8,13 @@
     - insert
         - Time/Space: #O(n) = n, n is the subpaths in the given route
     - find
-        - Time O(n) = logn
+        - Time O(n) = n, n is the subpaths in the given route
         - Space O(n)= n
-        - 
-        - 
 - Router
     - add_handler
         - Time/Space: #O(n) = n, n is the subpaths in the given route
     - lookup
-        - Time O(n) = logn
+        - Time O(n) = n
         - Space O(n)= n
 
 Note:
