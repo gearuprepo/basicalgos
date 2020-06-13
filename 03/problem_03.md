@@ -3,3 +3,6 @@ Using quicksort to sort the element in descending order. once sorted 2 numbers a
 
 Time complexity O(n) = nlogn +2n => nlogn
 Space Complexity O(n) = nlogn + n => nlogn
+
+Review comments fixes
+1. Fix for boundary conditions.

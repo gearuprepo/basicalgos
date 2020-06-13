@@ -1,7 +1,11 @@
 # O(n) = nlogn + 2n => nlogn
 def rearrange_digits(input_list):
-    if len(input_list)<2:
+    #Fix for boundary condition.
+    if len(input_list)==0:
         raise Exception("Insufficient data")
+    
+    if len(input_list) == 1:
+        return input_list[0],0
     arr = QuickSort(input_list) #O(n) = nlogn
     number1 = (arrtoint(arr[::2])) #O(n) = n
     number2 = (arrtoint(arr[1::2])) #O(n) = n
@@ -55,5 +59,6 @@ test_function(test_case)
 test_case = [[0,1,2,3,4,5,6,7,8,9], [97531,86420]]
 test_function(test_case)
 
-test_case = [[1], [0,0]]
+test_case = [[1], [1,0]]
 test_function(test_case)
+
