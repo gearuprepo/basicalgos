@@ -4,3 +4,7 @@ The basic approach is to scan through the numbers in a single pass and have a te
 
 Time complexity O(n) = n
 Space Complexity O(n) = Constant.
+
+
+#Review comments fixes
+1. Fix for boundary conditions.
